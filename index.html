@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario Información Básica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+
+  <form class="bg-white p-6 rounded-2xl shadow-md w-full max-w-2xl space-y-6">
+
+    <div class="bg-green-600 text-white text-3xl font-bold py-3 flex items-center space-x-2 px-4">
+      <span>Nueva Propiedad</span>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-800">Informacion Basica</h2>
+    <div>
+        <label class="block text-sm font-medium text-gray-700">Tipo de propiedad</label>
+        <select name="tipo_propiedad" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+          <option value="" disabled selected></option>
+          <option value="Casa" >Casa</option>
+          <option value="Departamento">Departamento</option>
+          <option value="Oficina">Oficina</option>
+        </select>
+      </div>
+
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Precio (BoB)*</label>
+        <input type="number" name="precio" min="0" placeholder="Bs. " required class="mt-1 block w-full p-2 border border-gray-300 rounded-md " />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Area (m²)</label>
+        <input type="number" name="area" min="0" placeholder=" " required class="mt-1 block w-full p-2 border border-gray-300 rounded-md " />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Moneda</label>
+        <input type="text" name="moneda" placeholder="USD" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md " />
+      </div>
+    </div>
+
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Titulo del anuncio*</label>
+      <input type="text" name="titulo" placeholder="Ej: Casa moneda con pscina en zona residencial" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md " />
+    </div>
+
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700">Descripcion detallada*</label>
+      <textarea name="descripcion" rows="5" placeholder="" required class="mt-1 block w-full p-2 border border-gray-300 rounded-md "></textarea>
+    </div>
+
+
+    <div>
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">Enviar</button>
+    </div>
+  </form>
+
+</body>
+</html>
